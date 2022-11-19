@@ -1,12 +1,10 @@
 {
-  "users":
-  
-  [
+  "users": [
     {
       "id": 1,
-      "name": "Leanne Graham",
+      "name": "Nazma Akter",
       "username": "Bret",
-      "email": "Sincere@april.biz",
+      "email": "nazma.ist.707@gmail.com",
       "address": {
         "street": "Kulas Light",
         "suite": "Apt. 556",
@@ -231,6 +229,48 @@
         "catchPhrase": "Centralized empowering task-force",
         "bs": "target end-to-end models"
       }
+    },
+    {
+      "name": "Nazma Akter",
+      "email": "nazma.ist.707@gmail.com",
+      "phone": "f",
+      "website": "https://www.linkedin.com/in/nazma-akter-9400861ba/",
+      "id": 13
+    },
+    {
+      "name": "Hafsa",
+      "email": "hafsa@gmail.com",
+      "phone": "12345678",
+      "website": "https://www.linkedin.com/in/nazma-akter-9400861ba/",
+      "id": 14
+    },
+    {
+      "name": "Hafsa",
+      "email": "hafsa@gmail.com",
+      "phone": "12345678",
+      "website": "https://www.linkedin.com/in/nazma-akter-9400861ba/",
+      "id": 15
+    },
+    {
+      "name": "Maryeam",
+      "email": "mar@gmail.com",
+      "phone": "3435",
+      "website": "https://www.linkedin.com/in/nazma-akter-9400861ba/",
+      "id": 16
+    },
+    {
+      "name": "Maryeam",
+      "email": "mar@gmail.com",
+      "phone": "3435",
+      "website": "https://www.linkedin.com/in/nazma-akter-9400861ba/",
+      "id": 17
+    },
+    {
+      "name": "Sania",
+      "email": "sani@gmail.com",
+      "phone": "12345",
+      "website": "rrtewt",
+      "id": 18
     }
   ]
 }

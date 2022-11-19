@@ -15,7 +15,7 @@ const Home = () => {
    const loadUsers = async() => {
         const result =await axios.get("http://localhost:3001/users");
          setUsers(result.data)
-        console.log(result)
+        // console.log(result)
    }
 
 
@@ -45,7 +45,7 @@ const Home = () => {
         <td>{user.website}</td>
         <td>
           <a href='/view' className='btn btn-primary me-2'>View</a>
-          <a href='/edit' className='btn btn-outline-primary me-2'>Edit</a>
+          <a href={`/users/edit/${user.id}` }className='btn btn-outline-primary me-2 '>Edit</a>
           <a href='/delete' className='btn btn-danger '>Delete</a>
         </td>
       </tr>

@@ -1,11 +1,12 @@
-import {React, useState} from 'react';
-import {useNavigate} from 'react-router-dom'
+import {React, useState,useEffect} from 'react';
+import {useNavigate,useParams} from 'react-router-dom'
 import axios from 'axios';
 
 
-const AddUser = () => {
+const EditUser = () => {
 
   const history = useNavigate()
+  const {id} = useParams()
   const [user, setUser]= useState({
     name:'',
     email:'',
@@ -21,23 +22,32 @@ const AddUser = () => {
         
   }
 
+  useEffect(() => {
+    loadUser()
+  },[])
+
 
   const onSubmit = async(e) => {
     e.preventDefault()
 
-    await axios.post('http://localhost:3001/users', user)
+    await axios.put(`http://localhost:3001/users/${id}`, user)
     history.push('/')
 
 
   }
+  
+   const loadUser = async() => {
+    const result = await axios.get(`http://localhost:3001/users/${id}`)
 
+    setUser(result.data)
+   }
   return (
    <div>
      <a href='/' className='btn btn-outline-primary mx-2 my-5'>Back To Home</a>
 
    <form onSubmit={onSubmit}>
    <div className='container border shadow pb-5 my-5'>
-       <h1 className='text-center'>Add User</h1>
+       <h1 className='text-center my-5'>Update {name} ?</h1>
        <div className="form-floating mb-3">
          <input type="text" className="form-control" id="floatingInput" name="name" value={name} onChange={inputChange}/>
          <label htmlFor="floatingInput">User Name</label>
@@ -64,4 +74,4 @@ const AddUser = () => {
   )
 }
 
-export default AddUser
+export default EditUser
