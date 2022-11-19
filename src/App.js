@@ -9,6 +9,8 @@ import {
 import Navbar from './components/layout/Navbar';
 import About from './components/pages/About';
 import Contract from './components/pages/Contract';
+import NotFound from './components/pages/NotFound';
+import AddUser from './components/users/AddUser';
 
 function App() {
   return (
@@ -17,9 +19,11 @@ function App() {
 
          <Router>
              <Routes>
-                 <Route exact path="/home" element={<Home/>} />
+                 <Route exact path="/" element={<Home/>} />
                  <Route exact path="/about" element={<About/>} />
                  <Route exact path="/contract" element={<Contract/>} />
+                 <Route exact path="/users/add" element={<AddUser/>} />
+                 <Route path='*' element={<NotFound />} />
               </Routes>
          </Router>
          
