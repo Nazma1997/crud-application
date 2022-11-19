@@ -18,6 +18,11 @@ const Home = () => {
         // console.log(result)
    }
 
+   const deleteUser = async(id) => {
+    await axios.delete(`http://localhost:3001/users/${id}`)
+    loadUsers()
+   }
+
 
   return (
     <div className='container py-5'>
@@ -46,7 +51,7 @@ const Home = () => {
         <td>
           <a href='/view' className='btn btn-primary me-2'>View</a>
           <a href={`/users/edit/${user.id}` }className='btn btn-outline-primary me-2 '>Edit</a>
-          <a href='/delete' className='btn btn-danger '>Delete</a>
+          <button className='btn btn-danger ' onClick={() => deleteUser(user.id)}>Delete</button>
         </td>
       </tr>
       ))
