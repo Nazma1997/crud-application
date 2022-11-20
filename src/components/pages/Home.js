@@ -42,14 +42,14 @@ const Home = () => {
 
     {
       users.map((user, index) => (
-        <tr>
+        <tr key={user.id}>
         <th scope="row">{index + 1}</th>
         <td>{user.name}</td>
         <td>{user.email}</td>
         <td>{user.phone}</td>
         <td>{user.website}</td>
         <td>
-          <a href='/view' className='btn btn-primary me-2'>View</a>
+          <a href={`/users/${user.id}` } className='btn btn-primary me-2'>View</a>
           <a href={`/users/edit/${user.id}` }className='btn btn-outline-primary me-2 '>Edit</a>
           <button className='btn btn-danger ' onClick={() => deleteUser(user.id)}>Delete</button>
         </td>

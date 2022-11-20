@@ -1,5 +1,6 @@
 import React from 'react'
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
+// import {NavLink} from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -28,6 +29,7 @@ const Navbar = () => {
     </div>
 
     <a className='btn btn-outline-light' href='/users/add'>Add user</a>
+   
   </div>
 </nav> 
     </div>

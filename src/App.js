@@ -12,6 +12,7 @@ import Contract from './components/pages/Contract';
 import NotFound from './components/pages/NotFound';
 import AddUser from './components/users/AddUser';
 import EditUser from './components/users/EditUser';
+import User from './components/users/User';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
                  <Route exact path="/contract" element={<Contract/>} />
                  <Route exact path="/users/add" element={<AddUser/>} />
                  <Route exact path="/users/edit/:id" element={<EditUser/>} />
+                 <Route exact path="/users/:id" element={<User/>} />
                  <Route path='*' element={<NotFound />} />
               </Routes>
          </Router>
